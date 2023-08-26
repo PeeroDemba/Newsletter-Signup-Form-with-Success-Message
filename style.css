@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(234, 29%, 20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+#desktop {
+  display: block;
+}
+
+#mobile {
+  display: none;
+}
+
+#error {
+  display: none;
+  font-weight: 700;
+}
+
+main {
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+#signup {
+  display: grid;
+  grid-template-columns: 56% 44%;
+  align-items: center;
+  width: 60rem;
+  min-height: 40rem;
+  border-radius: 2rem;
+  padding: 1.3rem;
+  background-color: white;
+}
+#signup .first {
+  padding: 0rem 4.3rem 0rem 3rem;
+}
+#signup .first h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+#signup .first p {
+  line-height: 1.3rem;
+}
+#signup .first .list {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#signup .first .list p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#signup .first .list img {
+  width: 1.2rem;
+}
+#signup .first form {
+  display: flex;
+  flex-direction: column;
+}
+#signup .first form div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+#signup .first form div label {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+#signup .first form div p {
+  color: hsl(4, 100%, 67%);
+}
+#signup .first form input[type=text] {
+  height: 3.2rem;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+}
+#signup .first form input[type=text]::-webkit-input-placeholder {
+  color: hsl(231, 7%, 60%);
+}
+#signup .first form input[type=text]:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+#signup .first form input[type=submit] {
+  height: 3.2rem;
+  border-radius: 0.5rem;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  font-weight: 700;
+}
+#signup .first form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: none;
+  border: none;
+  background-image: linear-gradient(to left, hsl(21, 100%, 67%), hsl(4, 100%, 67%));
+}
+#signup .second img {
+  width: 100%;
+}
+
+#success {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 27rem;
+  height: 27rem;
+  border-radius: 2rem;
+  padding: 3rem;
+  background-color: white;
+  display: none;
+}
+#success img {
+  width: 3.5rem;
+}
+#success h2 {
+  font-size: 3rem;
+  line-height: 2.8rem;
+}
+#success p {
+  line-height: 1.3rem;
+}
+#success p #view {
+  font-weight: 700;
+}
+#success button {
+  height: 3.2rem;
+  border-radius: 0.5rem;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  font-weight: 700;
+}
+#success button:hover {
+  cursor: pointer;
+  background-color: none;
+  border: none;
+  background-image: linear-gradient(to left, hsl(21, 100%, 67%), hsl(4, 100%, 67%));
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 980px) {
+  #signup {
+    display: grid;
+    grid-template-columns: 56% 44%;
+    align-items: center;
+    width: 45rem;
+    min-height: 35rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background-color: white;
+  }
+  #signup .first {
+    padding: 0rem 3rem 0rem 2rem;
+  }
+}
+@media (max-width: 767px) {
+  #desktop {
+    display: none;
+  }
+  #mobile {
+    display: block;
+  }
+  body {
+    background-color: white;
+  }
+  main {
+    min-height: 100vh;
+    margin-top: 0rem;
+  }
+  #signup {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    width: 97.5vw;
+    min-height: 100vh;
+    border-radius: 0rem;
+    padding: 0rem;
+    background-color: white;
+    gap: 1.5rem;
+  }
+  #signup .first {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    order: 2;
+  }
+  #signup .first h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  #signup .first .list {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #signup .first .list p {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #signup .first .list img {
+    width: 1.2rem;
+  }
+  #signup .second {
+    order: 1;
+  }
+  #signup .second img {
+    width: 100%;
+  }
+  #signup form {
+    display: flex;
+    flex-direction: column;
+  }
+  #signup form input[type=text] {
+    height: 3.3rem;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 0.5rem;
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+  }
+  #signup form input[type=submit] {
+    height: 3.3rem;
+    border-radius: 0.5rem;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+  }
+  #success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 97.5vw;
+    height: 100vh;
+    border-radius: 0rem;
+    padding: 1.5rem;
+    background-color: white;
+    gap: 1.5rem;
+    position: relative;
+    display: none;
+  }
+  #success img {
+    width: 3.5rem;
+    display: block;
+    margin-top: -25vh;
+    margin-bottom: 1.5rem;
+  }
+  #success h2 {
+    font-size: 3rem;
+    line-height: 2.8rem;
+  }
+  #success p {
+    line-height: 1.3rem;
+  }
+  #success p #view {
+    font-weight: 700;
+  }
+  #success button {
+    height: 3.3rem;
+    width: calc(100% - 3rem);
+    border-radius: 0.5rem;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    position: absolute;
+    bottom: 10vh;
+    left: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  #desktop {
+    display: none;
+  }
+  #mobile {
+    display: block;
+  }
+  body {
+    background-color: white;
+  }
+  main {
+    min-height: 100vh;
+    margin-bottom: 2rem;
+  }
+  #signup {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    width: 97.5vw;
+    min-height: 100vh;
+    border-radius: 0rem;
+    padding: 0rem;
+    background-color: white;
+    gap: 2rem;
+  }
+  #signup .first {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    order: 2;
+  }
+  #signup .first h1 {
+    margin-bottom: 1.5rem;
+  }
+  #signup .first .list {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #signup .first .list p {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #signup .first .list img {
+    width: 1.2rem;
+  }
+  #signup .second {
+    order: 1;
+  }
+  #signup .second img {
+    width: 100%;
+  }
+  #signup form {
+    display: flex;
+    flex-direction: column;
+  }
+  #signup form input[type=text] {
+    height: 3.3rem;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 0.5rem;
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+  }
+  #signup form input[type=submit] {
+    height: 3.3rem;
+    border-radius: 0.5rem;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+  }
+}
